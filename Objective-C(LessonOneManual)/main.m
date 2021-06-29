@@ -22,18 +22,18 @@ int main(int argc, const char * argv[]) {
     NSLog(@"String '%@' %@",enteredString, result ? (@"contains English letters.") : (@"does not contain any English letters."));
 
     // Calculator
-    long int firstNumber;
-    long int secondNumber;
+    NSInteger firstNumber;
+    NSInteger secondNumber;
     NSLog(@"\nEnter first number:");
     scanf("%li", &firstNumber);
     NSLog(@"\nEnter second number:");
     scanf("%li", &secondNumber);
 
-    long int summ = [calculator calculatorSumm:firstNumber and:secondNumber];
-    long int diff = [calculator calculatorDifference:firstNumber and:secondNumber];
-    long int multiply = [calculator calculatorMultiply:firstNumber and:secondNumber];
-    long int division = [calculator calculatorDivide:firstNumber and:secondNumber];
-    long int remainder = [calculator calculatorRemainder:firstNumber and:secondNumber];
+    NSInteger summ = [calculator calculatorSumm:firstNumber and:secondNumber];
+    NSInteger diff = [calculator calculatorDifference:firstNumber and:secondNumber];
+    NSInteger multiply = [calculator calculatorMultiply:firstNumber and:secondNumber];
+    NSInteger division = [calculator calculatorDivide:firstNumber and:secondNumber];
+    NSInteger remainder = [calculator calculatorRemainder:firstNumber and:secondNumber];
     NSLog(@"\nResult for entered numbers: \n summ: %li, \n difference: %li, \n multiplied: %li, \n division: %li, \n remainder after division: %li",
           summ, diff, multiply, division, remainder);
   }
