@@ -11,15 +11,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Calculator : NSObject
 
-- (NSInteger)calculatorSumm:(NSInteger)firstNumber and: (NSInteger)secondNumber;
+typedef NS_ENUM(NSUInteger, CalculatorMethod) {
+  CalculatorMethodPlus,
+  CalculatorMethodMinus,
+  CalculatorMethodMultiply,
+  CalculatorMethodDivide,
+  CalculatorMethodRemainder
+};
 
-- (NSInteger)calculatorDifference:(NSInteger)firstNumber and: (NSInteger)secondNumber;
-
-- (NSInteger)calculatorMultiply:(NSInteger)firstNumber and: (NSInteger)secondNumber;
-
-- (NSInteger)calculatorDivide:(NSInteger)firstNumber and: (NSInteger)secondNumber;
-
-- (NSInteger)calculatorRemainder:(NSInteger)firstNumber and: (NSInteger)secondNumber;
+- (NSInteger)calculate: (NSInteger)firstNumber and: (NSInteger)secondNumber method: (CalculatorMethod)method;
 
 @end
 
