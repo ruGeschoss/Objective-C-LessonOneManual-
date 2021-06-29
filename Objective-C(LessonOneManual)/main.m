@@ -7,35 +7,99 @@
 
 #import <Foundation/Foundation.h>
 #import "Calculator.h"
-#import "LetterChecker.h"
 
 #define calculator [Calculator new]
 
+typedef NS_ENUM(NSUInteger, Gender) {
+  GenderMale,
+  GenderFemale
+};
+
+struct Human {
+  NSString * name;
+  NSInteger age;
+  Gender gender;
+};
+
+typedef struct Human Human;
+
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-    // Check string for English letters
-    char cstring;
-    NSLog(@"\nCheck if letter is in English:");
-    scanf("%s", &cstring);
-    NSString *enteredString = [NSString stringWithCString: &cstring encoding: 1];
-    BOOL result = [LetterChecker checkIfContainsEnglish:enteredString];
-    NSLog(@"String '%@' %@",enteredString, result ? (@"contains English letters.") : (@"does not contain any English letters."));
+
+    // For-while loops
+    NSMutableArray * arrayOfEnteredNumbers = [NSMutableArray new];
+
+    NSInteger numbersCount;
+    NSLog(@"Enter numbers count:\n");
+    scanf("%li", &numbersCount);
+    NSLog(@"Enter those %li numbers:\n", numbersCount);
+
+    while ([arrayOfEnteredNumbers count] < numbersCount) {
+      NSInteger enteredNumber;
+      scanf("%li", &enteredNumber);
+      [arrayOfEnteredNumbers addObject: @(enteredNumber)];
+    }
+
+    for (NSNumber * number in arrayOfEnteredNumbers) {
+      NSLog(@"Previously stored number: %@", number);
+    }
+
+
+    // Structs
+    Human ann;
+    ann.name = @"Ann";
+    ann.age = 22;
+    ann.gender = GenderFemale;
+
+    Human alex = { @"Alex", 25, GenderMale };
+
+    NSLog(@"This is %@, gender: %@, age: %li",
+          ann.name,
+          ann.gender == 0 ? @"Male" : @"Female",
+          (long)ann.age);
+    NSLog(@"This is %@, gender: %@, age: %li",
+          alex.name,
+          alex.gender == 0 ? @"Male" : @"Female",
+          (long)alex.age);
 
     // Calculator
-    long int firstNumber;
-    long int secondNumber;
-    NSLog(@"\nEnter first number:");
-    scanf("%li", &firstNumber);
-    NSLog(@"\nEnter second number:");
-    scanf("%li", &secondNumber);
+    NSInteger firstInt;
+    NSInteger secondInt;
+    CalculatorMethod chosenMethod;
+    char enteredMethod;
 
-    long int summ = [calculator calculatorSumm:firstNumber and:secondNumber];
-    long int diff = [calculator calculatorDifference:firstNumber and:secondNumber];
-    long int multiply = [calculator calculatorMultiply:firstNumber and:secondNumber];
-    long int division = [calculator calculatorDivide:firstNumber and:secondNumber];
-    long int remainder = [calculator calculatorRemainder:firstNumber and:secondNumber];
-    NSLog(@"\nResult for entered numbers: \n summ: %li, \n difference: %li, \n multiplied: %li, \n division: %li, \n remainder after division: %li",
-          summ, diff, multiply, division, remainder);
+    NSLog(@"Enter method to use: \n");
+    scanf("%c", &enteredMethod);
+    NSLog(@"Enter first number to calculate: \n");
+    scanf("%li", &firstInt);
+    NSLog(@"Enter second number to calculate: \n");
+    scanf("%li", &secondInt);
+
+    switch (enteredMethod) {
+      case '+':
+        chosenMethod = CalculatorMethodPlus;
+        break;
+      case '-':
+        chosenMethod = CalculatorMethodMinus;
+        break;
+      case '*':
+        chosenMethod = CalculatorMethodMultiply;
+        break;
+      case '/':
+        chosenMethod = CalculatorMethodDivide;
+        break;
+      case '%':
+        chosenMethod = CalculatorMethodRemainder;
+        break;
+
+      default:
+        NSLog(@"Can not detect method %c.", enteredMethod);
+        return 0;
+    }
+
+    NSInteger calcResult = [calculator calculate:firstInt and:secondInt method: chosenMethod];
+    NSLog(@"Result after using method '%c' is %li", enteredMethod, calcResult);
+
   }
   return 0;
 }

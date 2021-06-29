@@ -29,4 +29,21 @@
   return firstNumber % secondNumber;
 }
 
+- (NSInteger)calculate: (NSInteger)firstNumber and: (NSInteger)secondNumber method: (CalculatorMethod)method {
+  switch (method) {
+    case CalculatorMethodPlus:
+      return [[Calculator new] calculatorSumm:firstNumber and:secondNumber];
+    case CalculatorMethodMinus:
+      return [[Calculator new] calculatorDifference:firstNumber and:secondNumber];
+    case CalculatorMethodMultiply:
+      return [[Calculator new] calculatorMultiply:firstNumber and:secondNumber];
+    case CalculatorMethodDivide:
+      return [[Calculator new] calculatorDivide:firstNumber and:secondNumber];
+    case CalculatorMethodRemainder:
+      return [[Calculator new] calculatorRemainder:firstNumber and:secondNumber];
+    default:
+      return 0;
+  }
+}
+
 @end
