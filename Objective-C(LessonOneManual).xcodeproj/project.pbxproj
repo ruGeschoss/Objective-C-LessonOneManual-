@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B78B0B7C2686067D00E036EF /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B7B2686067D00E036EF /* Calculator.m */; };
 		B78B0B7F26861A5000E036EF /* LetterChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B7E26861A5000E036EF /* LetterChecker.m */; };
+		B78B0B82268F6D9B00E036EF /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B81268F6D9B00E036EF /* Student.m */; };
 		B7A8299C267CDF85002FAD45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A8299B267CDF85002FAD45 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 		B78B0B7B2686067D00E036EF /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		B78B0B7D26861A5000E036EF /* LetterChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LetterChecker.h; sourceTree = "<group>"; };
 		B78B0B7E26861A5000E036EF /* LetterChecker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LetterChecker.m; sourceTree = "<group>"; };
+		B78B0B80268F6D9B00E036EF /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		B78B0B81268F6D9B00E036EF /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		B7A82998267CDF85002FAD45 /* Objective-C(LessonOneManual) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C(LessonOneManual)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A8299B267CDF85002FAD45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +71,8 @@
 				B78B0B7B2686067D00E036EF /* Calculator.m */,
 				B78B0B7D26861A5000E036EF /* LetterChecker.h */,
 				B78B0B7E26861A5000E036EF /* LetterChecker.m */,
+				B78B0B80268F6D9B00E036EF /* Student.h */,
+				B78B0B81268F6D9B00E036EF /* Student.m */,
 			);
 			path = "Objective-C(LessonOneManual)";
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				B7A8299C267CDF85002FAD45 /* main.m in Sources */,
 				B78B0B7F26861A5000E036EF /* LetterChecker.m in Sources */,
 				B78B0B7C2686067D00E036EF /* Calculator.m in Sources */,
+				B78B0B82268F6D9B00E036EF /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

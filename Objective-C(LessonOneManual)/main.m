@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Calculator.h"
+#import "Student.h"
 
 #define calculator [Calculator new]
 
@@ -25,6 +26,22 @@ typedef struct Human Human;
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
+
+    Student * studentOne = [[Student alloc] initStudent: @"Luke"
+                                                surname: @"Skywalker"
+                                                    age: 26];
+    Student * studentTwo = [[Student alloc] initStudent: @"Gordon"
+                                                 surname: @"Ramsey"
+                                                     age: 31];
+    Student * studentThree = [[Student alloc] initStudent: @"Todd"
+                                                 surname: @"Howard"
+                                                     age: 17];
+    NSArray * allStudents = @[studentOne, studentTwo, studentThree];
+
+    for (Student *student in allStudents) {
+      NSLog(@"%@", [student description]);
+      [student increaseAge];
+    }
 
     // For-while loops
     NSMutableArray * arrayOfEnteredNumbers = [NSMutableArray new];
