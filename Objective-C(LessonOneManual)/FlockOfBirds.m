@@ -20,21 +20,24 @@
 
     for (Bird *bird in _arrayOfBirds) {
       NSLog(@"%@ joined the Flock", bird.birdname);
+      [bird autorelease];
     }
+
+    [_arrayOfBirds autorelease];
   }
   return self;
 }
 
-- (void) disperseFlock {
-  for (Bird *bird in _arrayOfBirds) {
-    NSLog(@"Bird %@ is about to leave the Flock", bird.birdname);
-    [bird release];
-  }
-  [_arrayOfBirds release];
-}
+//- (void) disperseFlock {
+//  for (Bird *bird in _arrayOfBirds) {
+//    NSLog(@"Bird %@ is about to leave the Flock", bird.birdname);
+//    [bird release];
+//  }
+//  [_arrayOfBirds release];
+//}
 
 - (void) dealloc {
-  [self disperseFlock];
+//  [self disperseFlock]; // without autorelease pool
   NSLog(@"Flock dealloc");
   [super dealloc];
 }

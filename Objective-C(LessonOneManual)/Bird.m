@@ -17,13 +17,14 @@
     
     _birdname = birdname;
     NSLog(@"New bird %@", _birdname);
+    [_birdname autorelease];
   }
   return self;
 }
 
 - (void) dealloc {
   NSLog(@"Bird %@ flew away", _birdname);
-  [_birdname release];
+//  [_birdname release]; // without autorelease pool
   [super dealloc];
 }
 
