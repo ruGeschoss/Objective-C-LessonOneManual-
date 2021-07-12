@@ -10,6 +10,8 @@
 		B78B0B7C2686067D00E036EF /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B7B2686067D00E036EF /* Calculator.m */; };
 		B78B0B7F26861A5000E036EF /* LetterChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B7E26861A5000E036EF /* LetterChecker.m */; };
 		B78B0B82268F6D9B00E036EF /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B81268F6D9B00E036EF /* Student.m */; };
+		B78B0B85269C62D300E036EF /* FlockOfBirds.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B84269C62D300E036EF /* FlockOfBirds.m */; };
+		B78B0B89269C62FB00E036EF /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = B78B0B88269C62FB00E036EF /* Bird.m */; };
 		B7A8299C267CDF85002FAD45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A8299B267CDF85002FAD45 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +34,10 @@
 		B78B0B7E26861A5000E036EF /* LetterChecker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LetterChecker.m; sourceTree = "<group>"; };
 		B78B0B80268F6D9B00E036EF /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		B78B0B81268F6D9B00E036EF /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		B78B0B83269C62D300E036EF /* FlockOfBirds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlockOfBirds.h; sourceTree = "<group>"; };
+		B78B0B84269C62D300E036EF /* FlockOfBirds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlockOfBirds.m; sourceTree = "<group>"; };
+		B78B0B87269C62FB00E036EF /* Bird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		B78B0B88269C62FB00E036EF /* Bird.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 		B7A82998267CDF85002FAD45 /* Objective-C(LessonOneManual) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Objective-C(LessonOneManual)"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A8299B267CDF85002FAD45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B78B0B86269C62D900E036EF /* DeprecatedHW */ = {
+			isa = PBXGroup;
+			children = (
+				B78B0B7D26861A5000E036EF /* LetterChecker.h */,
+				B78B0B7E26861A5000E036EF /* LetterChecker.m */,
+				B78B0B80268F6D9B00E036EF /* Student.h */,
+				B78B0B81268F6D9B00E036EF /* Student.m */,
+			);
+			path = DeprecatedHW;
+			sourceTree = "<group>";
+		};
 		B7A8298F267CDF85002FAD45 = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +83,14 @@
 		B7A8299A267CDF85002FAD45 /* Objective-C(LessonOneManual) */ = {
 			isa = PBXGroup;
 			children = (
+				B78B0B86269C62D900E036EF /* DeprecatedHW */,
 				B7A8299B267CDF85002FAD45 /* main.m */,
 				B78B0B7A2686067D00E036EF /* Calculator.h */,
 				B78B0B7B2686067D00E036EF /* Calculator.m */,
-				B78B0B7D26861A5000E036EF /* LetterChecker.h */,
-				B78B0B7E26861A5000E036EF /* LetterChecker.m */,
-				B78B0B80268F6D9B00E036EF /* Student.h */,
-				B78B0B81268F6D9B00E036EF /* Student.m */,
+				B78B0B83269C62D300E036EF /* FlockOfBirds.h */,
+				B78B0B84269C62D300E036EF /* FlockOfBirds.m */,
+				B78B0B87269C62FB00E036EF /* Bird.h */,
+				B78B0B88269C62FB00E036EF /* Bird.m */,
 			);
 			path = "Objective-C(LessonOneManual)";
 			sourceTree = "<group>";
@@ -134,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7A8299C267CDF85002FAD45 /* main.m in Sources */,
+				B78B0B85269C62D300E036EF /* FlockOfBirds.m in Sources */,
+				B78B0B89269C62FB00E036EF /* Bird.m in Sources */,
 				B78B0B7F26861A5000E036EF /* LetterChecker.m in Sources */,
 				B78B0B7C2686067D00E036EF /* Calculator.m in Sources */,
 				B78B0B82268F6D9B00E036EF /* Student.m in Sources */,
