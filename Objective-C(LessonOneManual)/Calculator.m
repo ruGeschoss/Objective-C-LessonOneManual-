@@ -46,4 +46,19 @@
   }
 }
 
+// MARK: - Methods to track calculator
+
+- (instancetype) init {
+  self = [super init];
+  if (self) {
+    NSLog(@"Calculator created");
+  }
+  return self;
+}
+
+- (void) dealloc {
+  NSLog(@"Calculator deallocated");
+  [super dealloc];
+}
+
 @end

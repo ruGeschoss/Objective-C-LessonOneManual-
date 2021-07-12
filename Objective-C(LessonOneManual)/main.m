@@ -8,12 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "Calculator.h"
 
-#define calculator [Calculator new]
-
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
     
     // Calculator
+    Calculator *calculator = [Calculator new];
+
     NSInteger firstInt;
     NSInteger secondInt;
     CalculatorMethod chosenMethod;
@@ -51,6 +51,7 @@ int main(int argc, const char * argv[]) {
     NSInteger calcResult = [calculator calculate:firstInt and:secondInt method: chosenMethod];
     NSLog(@"Result after using method '%c' is %li", enteredMethod, calcResult);
 
+    [calculator release];
   }
   return 0;
 }
