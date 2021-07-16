@@ -9,40 +9,43 @@
 
 @implementation Calculator
 
-- (NSInteger)calculatorSumm:(NSInteger)firstNumber and: (NSInteger)secondNumber {
+CalculatorBlock calculatorSumm = ^(NSInteger firstNumber, NSInteger secondNumber) {
   return firstNumber + secondNumber;
-}
+};
 
-- (NSInteger)calculatorDifference:(NSInteger)firstNumber and: (NSInteger)secondNumber {
+CalculatorBlock calculatorDifference = ^(NSInteger firstNumber, NSInteger secondNumber) {
   return firstNumber - secondNumber;
-}
+};
 
-- (NSInteger)calculatorMultiply:(NSInteger)firstNumber and: (NSInteger)secondNumber {
+CalculatorBlock calculatorMultiply = ^(NSInteger firstNumber, NSInteger secondNumber) {
   return firstNumber * secondNumber;
-}
+};
 
-- (NSInteger)calculatorDivide:(NSInteger)firstNumber and: (NSInteger)secondNumber {
+CalculatorBlock calculatorDivide = ^(NSInteger firstNumber, NSInteger secondNumber) {
   return firstNumber / secondNumber;
-}
+};
 
-- (NSInteger)calculatorRemainder:(NSInteger)firstNumber and: (NSInteger)secondNumber {
+CalculatorBlock calculatorRemainder = ^(NSInteger firstNumber, NSInteger secondNumber) {
   return firstNumber % secondNumber;
-}
+};
 
 - (NSInteger)calculate: (NSInteger)firstNumber and: (NSInteger)secondNumber method: (CalculatorMethod)method {
   switch (method) {
     case CalculatorMethodPlus:
-      return [[Calculator new] calculatorSumm:firstNumber and:secondNumber];
+      return calculatorSumm(firstNumber, secondNumber);
+      break;
     case CalculatorMethodMinus:
-      return [[Calculator new] calculatorDifference:firstNumber and:secondNumber];
+      return calculatorDifference(firstNumber, secondNumber);
+      break;
     case CalculatorMethodMultiply:
-      return [[Calculator new] calculatorMultiply:firstNumber and:secondNumber];
+      return calculatorMultiply(firstNumber, secondNumber);
+      break;
     case CalculatorMethodDivide:
-      return [[Calculator new] calculatorDivide:firstNumber and:secondNumber];
+      return calculatorDivide(firstNumber, secondNumber);
+      break;
     case CalculatorMethodRemainder:
-      return [[Calculator new] calculatorRemainder:firstNumber and:secondNumber];
-    default:
-      return 0;
+      return calculatorRemainder(firstNumber, secondNumber);
+      break;
   }
 }
 

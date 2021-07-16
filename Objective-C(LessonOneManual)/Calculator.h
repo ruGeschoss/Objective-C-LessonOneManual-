@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Calculator : NSObject
 
+typedef NSInteger (^CalculatorBlock) (NSInteger firstNumber, NSInteger secondNumber);
+
 typedef NS_ENUM(NSUInteger, CalculatorMethod) {
   CalculatorMethodPlus,
   CalculatorMethodMinus,
