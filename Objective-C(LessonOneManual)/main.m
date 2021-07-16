@@ -13,17 +13,6 @@
 int main(int argc, const char * argv[]) {
 
   NSAutoreleasePool * pool = [NSAutoreleasePool new];
-
-  // MARK: - Flock of birds
-  Bird * birdOne = [[Bird alloc] initWithName: @"Gorge"];
-  Bird * birdTwo = [[Bird alloc] initWithName: @"Martin"];
-  Bird * birdThree = [[Bird alloc] initWithName: @"Fred"];
-  Bird * birdFour = [[Bird alloc] initWithName: @"Greg"];
-
-  NSArray * allBirds = [[NSArray alloc] initWithObjects: birdOne, birdTwo, birdThree, birdFour, nil];
-  FlockOfBirds * birdsFlock = [[FlockOfBirds alloc] initFlockWithBirds: allBirds];
-  [birdsFlock autorelease];
-
   // MARK: - Calculator
   Calculator *calculator = [Calculator new];
   [calculator autorelease];
